@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ 您的專屬 3D 貼圖 ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coral-pink': '#FF7E8B',
+                        'sky-blue': '#73D2DE',
+                        'soft-bg': '#F0F4FF',
+                    },
+                    borderRadius: {
+                        'xl': '24px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #F0F4FF 0%, #FFFFFF 100%);
+        }
+
+        .sticker-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .sticker-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 antialiased p-4 md:p-8">
+
+    <div class="max-w-[1000px] mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-16 pt-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+                ✨ 您的專屬 3D 貼圖 ✨
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                這是根據您的照片精心客製化而成的 3D 貼圖，每一個都充滿了特別的祝福與溫度。
+            </p>
+        </header>
+
+        <!-- Sticker Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Card 1 -->
+            <div class="sticker-card rounded-xl p-6 flex flex-col items-center">
+                <img src='https://opal.google/board/blobs/e7eb0a44-4d34-4ed8-8df2-5c4e7e1307c3' alt='Joyful Pose' class="w-full h-auto object-contain floating" />
+                <p class="mt-4 font-semibold text-gray-700">Joyful Pose</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="sticker-card rounded-xl p-6 flex flex-col items-center">
+                <img src='https://opal.google/board/blobs/164d55b9-b406-4c3e-8172-5fda6d379ebc' alt='Waving Pose' class="w-full h-auto object-contain floating" style="animation-delay: 0.2s;" />
+                <p class="mt-4 font-semibold text-gray-700">Waving Pose</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="sticker-card rounded-xl p-6 flex flex-col items-center">
+                <img src='https://opal.google/board/blobs/4ef4019f-bb4b-4eea-bc0b-5bfa291a56d9' alt='Thumbs Up' class="w-full h-auto object-contain floating" style="animation-delay: 0.4s;" />
+                <p class="mt-4 font-semibold text-gray-700">Thumbs Up</p>
+            </div>
+
+            <!-- Card 4 (Centered in grid row 2) -->
+            <div class="sticker-card rounded-xl p-6 flex flex-col items-center lg:col-start-2">
+                <img src='https://opal.google/board/blobs/72ca9747-fb5d-4457-bc29-c56b3d1a5ce7' alt='Holding Heart' class="w-full h-auto object-contain floating" style="animation-delay: 0.6s;" />
+                <p class="mt-4 font-semibold text-gray-700">Holding Heart</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="sticker-card rounded-xl p-6 flex flex-col items-center">
+                <img src='https://opal.google/board/blobs/e1fcf752-7995-4db0-8d5b-099a15fefd27' alt='Celebration' class="w-full h-auto object-contain floating" style="animation-delay: 0.8s;" />
+                <p class="mt-4 font-semibold text-gray-700">Celebration</p>
+            </div>
+
+        </div>
+
+        <!-- Footer/Action Area -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 py-8">
+            <button class="px-8 py-4 bg-coral-pink hover:bg-opacity-90 text-white font-bold rounded-full shadow-lg transition-all transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-coral-pink/30">
+                全部下載 (Download All)
+            </button>
+            <button class="px-8 py-4 bg-white hover:bg-gray-50 text-sky-blue font-bold rounded-full shadow-md border border-gray-200 transition-all hover:border-sky-blue/30 active:scale-95">
+                回首頁 (Back to Home)
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
